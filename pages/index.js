@@ -6,6 +6,9 @@ import Date from '../components/date';
 
 import { getSortedPostsData } from '../lib/posts';
 
+
+
+
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
@@ -21,6 +24,9 @@ export default function Home({ allPostsData }) {
       {/* Keep the existing code here */}
 
       {/* Add this <section> tag below the existing <section> tag */}
+      <div>
+        <h2>Log in with <Link href='/protected'>Github</Link> or <Link href='/protected'>Google</Link></h2>                
+      </div>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
