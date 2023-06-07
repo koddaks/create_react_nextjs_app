@@ -3,6 +3,9 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Date from '../components/date';
+import Image from 'next/image';
+import GithubLogo from '../public/logo/github-mark.svg'
+import GoogleLogo from '../public/logo/google-tile.svg'
 
 import { getSortedPostsData } from '../lib/posts';
 
@@ -25,7 +28,7 @@ export default function Home({ allPostsData }) {
 
       {/* Add this <section> tag below the existing <section> tag */}
       <div>
-        <h2>Log in with <Link href='/protected'>Github</Link> or <Link href='/protected'>Google</Link></h2>                
+        <h2>Log in with <Link href='/protected'>Github <Image src={GithubLogo} width={40} height={40} alt='github'/></Link> or <Link href='/protected'>Google <Image src={GoogleLogo} width={40} height={40} alt='google'/></Link></h2>                
       </div>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
